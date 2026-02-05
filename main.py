@@ -1,10 +1,5 @@
 import re
-import math
-import matplotlib.pyplot as plt
-import numpy as np
 import LevensteinBK 
-import unicodedata
-from nltk.probability import FreqDist
 
 
 def norm(text):
@@ -17,7 +12,7 @@ content = content.lower()
 cleaned = "".join(char if char.isalpha() else " " for char in content)
 tokens = re.findall(r"\b[^\W\d_]+(?:[\'’\-][^\W\d_]+)*\b", content)
 tokens = [t.replace("’", "'") for t in tokens]
-freqDist = FreqDist(tokens)
+
 vocab = set()
 
 for token in tokens:

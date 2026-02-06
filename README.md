@@ -5,9 +5,9 @@
 report-slides/
 ├── AS-1_Group-4_Report.pdf   -Assignment report
 ├── AS-1_Group-4_Slides.pdf   -Presentation slides
-└── Datasheet.md   -Brief description of the dataset
+└── Datasheet.md              -Brief description of the dataset
 
 source-code/
 ├── Tokenizer.ipynb   -Jupyter Notebook containing all the source code
-└── Fuzuli-I.txt   -Input text file
+└── Fuzuli-I.txt      -Input text file
 ```

@@ -1,8 +1,4 @@
 import math
-import unicodedata
-
-def norm(text):
-    return unicodedata.normalize('NFC', text)
 
 keyboard_az = {
   
@@ -23,9 +19,6 @@ keyboard_az = {
     'b': (5, 2), 'n': (6, 2), 'm': (7, 2), 'ç': (8, 2),
     'ş': (9, 2)
 }
-
-
-#keyboard_az = {norm(k): v for k, v in keyboard_az.items()}
 
 def distance(c1, c2, layout):
     x_1, y_1 = layout[c1]
@@ -51,19 +44,19 @@ for c, row in matrix_dist.items():
     matrix_prob[c] = {k: v/total for k, v in row.items()}
 
 matrix_prob['i']['ı'] = max(matrix_prob['i']['ı'],0.7)
-matrix_prob['ı']['i'] = max(matrix_prob['ı']['i'],0.7)
-matrix_prob['ü']['u'] = max(matrix_prob['ü']['u'],0.7)
+matrix_prob['ı']['i'] = max(matrix_prob['ı']['i'],0.8)
+matrix_prob['ü']['u'] = max(matrix_prob['ü']['u'],0.8)
 matrix_prob['u']['ü'] = max(matrix_prob['u']['ü'],0.7)
-matrix_prob['ö']['o'] = max(matrix_prob['ö']['o'],0.7)
+matrix_prob['ö']['o'] = max(matrix_prob['ö']['o'],0.8)
 matrix_prob['o']['ö'] = max(matrix_prob['o']['ö'],0.7)
-matrix_prob['ğ']['g'] = max(matrix_prob['ğ']['g'],0.7)
-matrix_prob['g']['ğ'] = max(matrix_prob['g']['ğ'],0.7)
+matrix_prob['ğ']['g'] = max(matrix_prob['ğ']['g'],0.8)
+matrix_prob['g']['ğ'] = max(matrix_prob['g']['ğ'],0.9)
 matrix_prob['e']['ə'] = max(matrix_prob['e']['ə'],0.7)
-matrix_prob['ə']['e'] = max(matrix_prob['ə']['e'],0.7)
-matrix_prob['ç']['c'] = max(matrix_prob['ç']['c'],0.7)
-matrix_prob['c']['ç'] = max(matrix_prob['c']['ç'],0.7)
-matrix_prob['ş']['s'] = max(matrix_prob['ş']['s'],0.7)
-matrix_prob['s']['ş'] = max(matrix_prob['s']['ş'],0.7)
+matrix_prob['ə']['e'] = max(matrix_prob['ə']['e'],0.8)
+matrix_prob['ç']['c'] = max(matrix_prob['ç']['c'],0.8)
+matrix_prob['c']['ç'] = max(matrix_prob['c']['ç'],0.8)
+matrix_prob['ş']['s'] = max(matrix_prob['ş']['s'],0.8)
+matrix_prob['s']['ş'] = max(matrix_prob['s']['ş'],0.9)
 
 
 for c, row in matrix_prob.items():
@@ -75,4 +68,5 @@ matrix_cost = {}
 
 for c, row in matrix_prob.items():
     matrix_cost[c] = {k: -math.log(v) for k, v in row.items()}
+
 

@@ -8,6 +8,6 @@ report-slides/
 └── Datasheet.md - Brief description of the dataset
 
 source-code/
-├── Tokenizer.ipynb - Jupyter Notebeek containing all the source code
+├── Tokenizer.ipynb - Jupyter Notebook containing all the source code
 └── Fuzuli-I.txt - Input text file
 ```

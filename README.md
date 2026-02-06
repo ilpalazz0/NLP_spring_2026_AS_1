@@ -1,13 +1,13 @@
 # Assignment 1 - Group 4 
 
-### repository structure:
+### Repository structure:
 ```
 report-slides/
-├── AS-1_Group-4_Report.pdf
-├── AS-1_Group-4_Slides.pdf
-└── README.md
+├── AS-1_Group-4_Report.pdf - Assignment Report
+├── AS-1_Group-4_Slides.pdf - Presentation slides
+└── Datasheet.md - Brief description of the dataset
 
 source-code/
-├── Tokenizer.ipynb
-└── Fuzuli-I.txt
+├── Tokenizer.ipynb - Jupyter Notebeek containing all the source code
+└── Fuzuli-I.txt - Input text file
 ```

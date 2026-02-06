@@ -3,7 +3,7 @@
 ### Repository structure:
 ```
 report-slides/
-├── AS-1_Group-4_Report.pdf - Assignment Report
+├── AS-1_Group-4_Report.pdf - Assignment report
 ├── AS-1_Group-4_Slides.pdf - Presentation slides
 └── Datasheet.md - Brief description of the dataset
 
